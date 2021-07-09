@@ -40,6 +40,13 @@ const hitchcockQuotes = [
     `What is drama but life with the dull bits cut out`,
     `Puns are the highest form of literature.`,
 ];
+const elvisQuotes = [
+    `Never wait for tomorrow, what if tomorrow never comes?`,
+    `When things go wrong, don’t go with them.`,
+    `There’s no job too immense, when you got confidence.`,
+    `The road to love is full of danger signs.`,
+    `I forgot to remember to forget.`,
+];
 
 const greeting = () => {
     console.log(`Hello, ${username}!`);
