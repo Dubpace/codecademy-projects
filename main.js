@@ -3,7 +3,7 @@
 const username = 'Will';
 //Determine randomly if celeb is alive or dead
 const alive = Math.random() < 0.5;
-//Store quote possibilites as an array
+//Store celeb quotes in individual arrays
 const kanyeQuotes = [
     `Love your haters, they’re your biggest fans.`,
     `For me, giving up is harder than trying.`,
@@ -32,6 +32,13 @@ const vanGoghQuotes = [
     `The way to know life is to love many things.`,
     `For my part I know nothing with any certainty, but the sight of the stars makes me dream.`,
     `Conscience is a man's compass.`,
+];
+const hitchcockQuotes = [
+    `There is no terror in the bang, only in the anticipation of it.`,
+    `The length of a film should be directly related to the endurance of the human bladder.`,
+    `Always make the audience suffer as much as possible.`,
+    `What is drama but life with the dull bits cut out`,
+    `Puns are the highest form of literature.`,
 ];
 
 const greeting = () => {
