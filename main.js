@@ -2,7 +2,7 @@
 //Set name of user for greeting
 const username = 'Will';
 //Determine randomly if celeb is alive or dead
-const alive = Math.random() < 0.5;
+const deadOrAlive = Math.random() < 0.5;
 //Store celeb quotes in individual arrays
 const kanyeQuotes = [
     `Love your haters, they’re your biggest fans.`,
@@ -48,9 +48,24 @@ const elvisQuotes = [
     `I forgot to remember to forget.`,
 ];
 
+//Greet user to the program
 const greeting = () => {
     console.log(`Hello, ${username}!`);
 }
-//Greet user to the program
 greeting();
-// console.log(alive);
+
+//Celeb factory function
+const createCeleb = (fullName, alive, quoteArray) => {
+    return {
+        name: fullName,
+        alive,
+        quotes: quoteArray,
+        randomQuote() {
+            let randomIndex = Math.floor(Math.random() * this.quotes.length);
+            return `"${this.quotes[randomIndex]}"`
+        },
+    }
+}
+
+const kanye = createCeleb('Kanye West', true, kanyeQuotes);
+console.log(kanye.randomQuote());
