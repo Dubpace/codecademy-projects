@@ -1,7 +1,7 @@
 //Declare variables for use in inspirational message script
 //Set name of user for greeting
 const username = 'Will';
-//Determine if celeb is alive or dead
+//Determine randomly if celeb is alive or dead
 const alive = Math.random() < 0.5;
 //Store quote possibilites as an array
 const kanyeQuotes = [
@@ -26,9 +26,16 @@ const banksyQuotes = [
     `All artists are willing to suffer for their work. But why are so few prepared to learn to draw?`,
     `People who enjoy waving flags don't deserve to have one`,
 ];
+const vanGoghQuotes = [
+    `Great things are done by a series of small things brought together.`,
+    `I feel that there is nothing more truly artistic than to love people.`,
+    `The way to know life is to love many things.`,
+    `For my part I know nothing with any certainty, but the sight of the stars makes me dream.`,
+    `Conscience is a man's compass.`,
+];
 
 const greeting = () => {
-    console.log(`Hello, ${username}! Here is your Kanye quote:`);
+    console.log(`Hello, ${username}!`);
 }
 //Greet user to the program
 greeting();
