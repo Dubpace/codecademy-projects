@@ -1,6 +1,4 @@
 //Declare variables for use in inspirational message script
-//Set name of user for greeting
-const username = 'Will';
 //Randomly determine if celeb is alive or dead
 const alive = Math.random() < 0.5;
 //Store celeb quotes in individual arrays
@@ -47,12 +45,6 @@ const elvisQuotes = [
     `The road to love is full of danger signs.`,
     `I forgot to remember to forget.`,
 ];
-
-//Greet user to the program
-const greeting = () => {
-    console.log(`Hello, ${username}!`);
-}
-greeting();
 
 //Celeb factory function
 const createCeleb = (fullName, alive, quoteArray) => {
