@@ -1,7 +1,7 @@
 //Declare variables for use in inspirational message script
 //Set name of user for greeting
 const username = 'Will';
-//Determine randomly if celeb is alive or dead
+//Randomly determine if celeb is alive or dead
 const alive = Math.random() < 0.5;
 //Store celeb quotes in individual arrays
 const kanyeQuotes = [
@@ -86,7 +86,9 @@ const message = () => {
         console.log(`Your celebrity quote is from ${living[randomIndex].name}, who is still alive today.`);
         console.log(living[randomIndex].randomQuote());
     } else {
-        console.log(`The celeb chosen was dead. Try again!`);
+        let randomIndex = Math.floor(Math.random() * deceased.length);
+        console.log(`Your celebrity quote is from ${deceased[randomIndex].name}, who is unfortunately no longer with us.`);
+        console.log(deceased[randomIndex].randomQuote());
     }
 };
 
