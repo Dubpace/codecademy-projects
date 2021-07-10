@@ -2,7 +2,7 @@
 //Set name of user for greeting
 const username = 'Will';
 //Determine randomly if celeb is alive or dead
-const deadOrAlive = Math.random() < 0.5;
+const alive = Math.random() < 0.5;
 //Store celeb quotes in individual arrays
 const kanyeQuotes = [
     `Love your haters, they’re your biggest fans.`,
@@ -79,6 +79,16 @@ const elvis = createCeleb('Elvis Presley', false, elvisQuotes);
 const living = [kanye, spielberg, banksy];
 const deceased = [vanGogh, hitchcock, elvis];
 
+//Primary message function to randomly select a celeb and display a random quote
+const message = () => {
+    if (alive) {
+        let randomIndex = Math.floor(Math.random() * living.length);
+        console.log(`Your celebrity quote is from ${living[randomIndex].name}, who is still alive today.`);
+        console.log(living[randomIndex].randomQuote());
+    } else {
+        console.log(`The celeb chosen was dead. Try again!`);
+    }
+};
 
 //Testing here
-console.log(living[0].randomQuote());
+message();
