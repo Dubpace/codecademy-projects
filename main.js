@@ -84,5 +84,5 @@ const message = () => {
     }
 };
 
-//Testing here
+//Call message function to randomly generate quote for user
 message();
