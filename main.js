@@ -62,10 +62,23 @@ const createCeleb = (fullName, alive, quoteArray) => {
         quotes: quoteArray,
         randomQuote() {
             let randomIndex = Math.floor(Math.random() * this.quotes.length);
-            return `"${this.quotes[randomIndex]}"`
+            return `"${this.quotes[randomIndex]}"`;
         },
     }
 }
 
+// Initialize celeb objects
 const kanye = createCeleb('Kanye West', true, kanyeQuotes);
-console.log(kanye.randomQuote());
+const spielberg = createCeleb('Steven Spielberg', true, spielbergQuotes);
+const banksy = createCeleb('Banksy', true, banksyQuotes);
+const vanGogh = createCeleb('Vincent Van Gogh', false, vanGoghQuotes);
+const hitchcock = createCeleb('Alfred Hitchcock', false, hitchcockQuotes);
+const elvis = createCeleb('Elvis Presley', false, elvisQuotes);
+
+// Initialize two arrays of celebs that are dead or alive
+const living = [kanye, spielberg, banksy];
+const deceased = [vanGogh, hitchcock, elvis];
+
+
+//Testing here
+console.log(living[0].randomQuote());
